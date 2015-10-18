@@ -1,0 +1,83 @@
+.cardRow {
+    border-top: 1px solid grey;
+}
+
+#teamlink{
+    margin-bottom:15px;
+}
+
+
+.commonStatLabel{
+    font-size:20px;
+    text-align:left;
+    font-style:italic;
+}
+
+.squadLableRow{
+    background-color: darkgray;
+    color:white
+}
+
+#squadLabel {
+    text-align:right;
+}
+
+#commonStat{
+    font-size:40px;
+    text-align:center;
+}
+
+#userName{
+    font-size:40px;
+    text-align:left;
+}
+
+#posInf {
+    font-size:20px;
+    text-align:center;
+}
+
+#pos {
+    font-size:40px;
+    text-align:center;
+}
+
+#achivs {
+    text-align:right;
+}
+
+#achivTable {
+    font-size:20px;
+    text-align:left;
+}
+
+#day-table tbody tr {
+    cursor: pointer;
+}
+
+#week-table tbody tr {
+    cursor: pointer;
+}
+
+
+#teamID {
+    visibility: hidden;
+}
+
+#userName{
+    font-size:40px;
+    text-align:left;
+}
+
+#achivs {
+    text-align:right;
+}
+
+#achivTable {
+    font-size:20px;
+    text-align:left;
+}
+
+a:visited {
+    color: gray;
+}
