@@ -45,12 +45,12 @@ function writeTeamInfo(data) {
 $(document).on('click', '#day-table tr', function() {
     loadTeamInfo(this.id);
     loadSquad();
-    loadHistory();
+    //loadHistory();
 });
 
 $(document).on('click', '#week-table tr', function() {
     loadTeamInfo(this.id);
     loadSquad();
-    loadHistory();
+    //loadHistory();
 });
 

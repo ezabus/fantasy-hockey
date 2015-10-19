@@ -64,7 +64,6 @@
 			<li class="active"><a href="#commonStat" data-toggle="tab">Статистика</a></li>
 			<li><a href="#achivs" data-toggle="tab">Достижения</a></li>
 			<li><a href="#hist" data-toggle="tab">История</a></li>
-			<li><input type="checkbox" name="dayWeekSwitch" data-on-text="days" data-off-text="weeks" checked></li>
 		</ul>
 		<div class="tab-content">
 			<div class="tab-pane active" id="commonStat">
@@ -120,16 +119,36 @@
 				</div>
 			</div>
 			<div class="tab-pane" id="hist">
-				<div class="row">
-					<select class="form-control" id="monthSel">
-						<option value="9">Сентябрь</option>
-						<option value="10">Октябрь</option>
-					</select>
-				</div>
-				<table class="table table-striped table-hover" id="histTable">
-					<tr><td>День</td><td>Очки</td><td>Место</td><td>ОЗ</td></tr>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" id="dayHistButton">
+							Дни
+						</button>
+					</div>
+					<div class="panel-collapse collapse out">
+							<select class="form-control" id="monthSel">
+								<option value="9">Сентябрь</option>
+								<option value="10">Октябрь</option>
+							</select>
 
-				</table>
+						<table class="table table-striped table-hover" id="histTable">
+							<tr><td>День</td><td>Очки</td><td>Место</td><td>ОЗ</td></tr>
+
+						</table>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" id="weekHistButton">
+							Недели
+						</button>
+					</div>
+					<div class="panel-collapse collapse out">
+						<table class="table table-striped table-hover" id="histTableWeek">
+							<tr><td>День</td><td>Очки</td><td>Место</td><td>ОЗ</td></tr>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
 		<br>

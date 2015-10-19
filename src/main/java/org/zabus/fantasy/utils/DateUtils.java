@@ -20,10 +20,8 @@ public class DateUtils {
 
     public static void main(String argsp[])
     {
-        //System.out.println(getLastMonday());
-        getMondaySet();
-        //getMonthDateRange(9);
-        System.out.println(getLastDayOfLastMonth(9));
+       System.out.println(getWeekRange("2015/10/19"));
+
     }
 
     public static String getYesterdayDate()
@@ -82,6 +80,13 @@ public class DateUtils {
         System.out.println(dateFormatter.print(startOfNextMonth));
     }
 
+    public static String getFirstDayOfMonth(int month)
+    {
+        LocalDate startOfMonth = new LocalDate(getYear(), month, 1);
+        DateTimeFormatter dateFormatter = DateTimeFormat.forPattern("yyyy/MM/dd");
+        return dateFormatter.print(startOfMonth);
+    }
+
     public static String getLastDayOfMounth(int month)
     {
         LocalDate startOfNextMonth = new LocalDate(getYear(),month,1);
@@ -98,5 +103,14 @@ public class DateUtils {
         DateTimeFormatter dateFormatter = DateTimeFormat.forPattern("yyyy/MM/dd");
         //System.out.println(dateFormatter.print(endOfLastMonth));
         return dateFormatter.print(endOfLastMonth);
+    }
+
+    public static String getWeekRange(String dateCode)
+    {
+        DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy/MM/dd");
+        DateTimeFormatter outformatter = DateTimeFormat.forPattern("dd.MM");
+        DateTime endWeek = formatter.parseDateTime(dateCode);
+        DateTime startWeek = endWeek.minusDays(6);
+        return outformatter.print(startWeek) + "-" + outformatter.print(endWeek);
     }
 }
