@@ -3,7 +3,7 @@
  */
 function loadSquad() {
     $.get("squadload",
-        {teamID: $("#userName").text()},
+        {teamID: $("#teamID").text()},
         function(data) {
             drawSquad(data);
         });
