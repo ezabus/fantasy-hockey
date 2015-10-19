@@ -1,6 +1,7 @@
 package org.zabus.fantasy.web;
 
 import com.google.common.collect.Lists;
+import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,7 @@ import org.zabus.fantasy.dal.service.SquadService;
 import org.zabus.fantasy.dal.service.exeption.SquadNotFoundException;
 import org.zabus.fantasy.utils.DateUtils;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by user on 13.10.2015.
@@ -68,4 +67,31 @@ public class HistController {
         return mondays;
     }
 
+    @RequestMapping(value="/chart", method = RequestMethod.GET)
+    @ResponseBody
+    public long[][] chartControllerMock(@RequestParam("teamID") int teamID)
+    {
+        long data[][] = null;
+        try {
+            List<Squad> squads = Lists.newLinkedList(squadService.getSquadsByTeamId(teamID));
+            data = new long[squads.size()][2];
+            for(int i = 0; i < squads.size(); i++)
+            {
+                data[i][0] = DateUtils.getTimestampValue(squads.get(i).getDateCode());
+                data[i][1] = squads.get(i).getOveralRank();
+            }
+        } catch (SquadNotFoundException e) {
+            e.printStackTrace();
+        }
+        return data;
+//        int data[][] = new int[5][2];
+//        data[0][0] = 1;
+//        data[0][1] = 10;
+//        data[1][0] = 2;
+//        data[1][1] = 15;
+//        data[2][0] = 3;
+//        data[2][1] = 7;
+//        data[3][0] = 0;
+//        data[3][1] = 5;
+    }
 }

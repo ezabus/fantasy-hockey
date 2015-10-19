@@ -6,7 +6,9 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.sql.Timestamp;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -20,7 +22,7 @@ public class DateUtils {
 
     public static void main(String argsp[])
     {
-       System.out.println(getWeekRange("2015/10/19"));
+       System.out.println(getTimestampValue("2015/10/19"));
 
     }
 
@@ -112,5 +114,19 @@ public class DateUtils {
         DateTime endWeek = formatter.parseDateTime(dateCode);
         DateTime startWeek = endWeek.minusDays(6);
         return outformatter.print(startWeek) + "-" + outformatter.print(endWeek);
+    }
+
+    public static long getTimestampValue(String dateCode)
+    {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = null;
+        try {
+            date = dateFormat.parse(dateCode);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        long time = date.getTime();
+        Timestamp ts = new Timestamp(time);
+        return ts.getTime();
     }
 }

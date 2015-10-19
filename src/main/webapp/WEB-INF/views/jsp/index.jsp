@@ -121,6 +121,16 @@
 			<div class="tab-pane" id="hist">
 				<div class="panel panel-default">
 					<div class="panel-heading">
+						<button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" id="chartButton">
+							График
+						</button>
+					</div>
+					<div class="panel-collapse collapse out">
+						<div id="chart-container" style=" height:400px;"></div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
 						<button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse" id="dayHistButton">
 							Дни
 						</button>
@@ -151,7 +161,6 @@
 				</div>
 			</div>
 		</div>
-		<br>
 		<div id="squadLabel" class="commonStatLabel"></div>
 		<!--div id="squad">
 			<div class="commonStatLabel">нападение</div>
@@ -212,6 +221,7 @@
 <spring:url value="/resources/core/js/top.js" var="top" />
 <spring:url value="/resources/core/js/squad.js" var="squad" />
 <spring:url value="/resources/core/js/history.js" var="history" />
+<spring:url value="/resources/core/js/chart.js" var="chart" />
 
 <script src="${jquery}"></script>
 <script src="${coreJs}"></script>
@@ -222,6 +232,9 @@
 <script src="${top}"></script>
 <script src="${squad}"></script>
 <script src="${history}"></script>
+<script src="${chart}"></script>
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
 <script type="text/javascript">
 </script>
 

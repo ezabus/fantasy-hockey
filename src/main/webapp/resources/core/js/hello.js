@@ -42,15 +42,17 @@ function writeTeamInfo(data) {
 }
 
 
-$(document).on('click', '#day-table tr', function() {
+$(document).on('click', '#day-table tr, #week-table tr', function() {
     loadTeamInfo(this.id);
     loadSquad();
-    //loadHistory();
+    loadHistory();
+    drawChart();
 });
 
-$(document).on('click', '#week-table tr', function() {
-    loadTeamInfo(this.id);
-    loadSquad();
-    //loadHistory();
-});
+//$(document).on('click', '#week-table tr', function() {
+//    loadTeamInfo(this.id);
+//    loadSquad();
+//    loadHistory();
+//    drawChart();
+//});
 
