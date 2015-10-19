@@ -148,12 +148,12 @@
 		</div-->
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<button type="button" class="btn btn-default btn-xs spoiler-trigger commonStatLabel" data-toggle="collapse">состав</button>
+				<button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">Cостав</button>
 				</div>
-				<div class="panel-collapse collapse out">
+				<div class="panel-collapse collapse in">
 				<div id="squad">
 					<table class="table" id="squad-table">
-						<tr><th>Имя</th><th>Команда</th><th>Очки</th><th>Стоимость</th></tr>
+						<tr><th>Имя</th><th>Команда</th><th>Очки</th><th>$</th></tr>
 						<tr id="forwardsTr" class="squadLableRow"><th colspan="4">Нападение</th></tr>
 						<tr id="deffsTr" class="squadLableRow"><th colspan="4" >Защита</th></tr>
 						<tr id="gksTr" class="squadLableRow"><th colspan="4" >Вратари</th></tr>

@@ -37,3 +37,7 @@ function drawPlayer(player, startRow) {
     row.append($("<td class='col-md-2'>" + player.price + "</td>"));
     return row;
 }
+
+$(".spoiler-trigger").click(function() {
+    $(this).parent().next().collapse('toggle');
+});
