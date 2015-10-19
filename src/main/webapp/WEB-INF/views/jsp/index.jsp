@@ -192,6 +192,7 @@
 <spring:url value="/resources/core/js/bootstrap-switch.min.js" var="switch" />
 <spring:url value="/resources/core/js/top.js" var="top" />
 <spring:url value="/resources/core/js/squad.js" var="squad" />
+<spring:url value="/resources/core/js/history.js" var="history" />
 
 <script src="${jquery}"></script>
 <script src="${coreJs}"></script>
@@ -201,6 +202,7 @@
 <script src="${switch}"></script>
 <script src="${top}"></script>
 <script src="${squad}"></script>
+<script src="${history}"></script>
 <script type="text/javascript">
 </script>
 
