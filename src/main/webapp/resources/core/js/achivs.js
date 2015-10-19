@@ -38,7 +38,6 @@ $(document).ready(function() {
 function getAchivs() {
     achivs = new Object();
     teamID = $("#teamID").text();
-    alert($("#teamID").text());
     $.get("dayachivs",
         {teamID: teamID},
         function(data){
