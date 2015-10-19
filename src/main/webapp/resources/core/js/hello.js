@@ -1,26 +1,26 @@
-$(document).ready(function(){
-    $("#achivSel").change(function() {
-        var firstRow = $("#achivTable :first-child :first-child").children()
-        //alert($("#achivSel :selected").attr("val"))
-        var selectedItemIndex = $("#achivSel :selected").attr("val");
-        if(selectedItemIndex == 1) {
-            $(firstRow[0]).text("Лидер")
-            $(firstRow[1]).text("Топ 10")
-            $(firstRow[2]).text("Топ 100")
-            $(firstRow[3]).text("Топ 500")
-        } else if(selectedItemIndex == 2) {
-            $(firstRow[0]).text("Чемпион")
-            $(firstRow[1]).text("Призёр")
-            $(firstRow[2]).text("Топ 10")
-            $(firstRow[3]).text("Топ 100")
-        } else if (selectedItemIndex == 3) {
-            $(firstRow[0]).text("Чемпион")
-            $(firstRow[1]).text("Призёр")
-            $(firstRow[2]).text("Топ 10")
-            $(firstRow[3]).text("Топ 100")
-        }
-    });
-});
+//$(document).ready(function(){
+//    $("#achivSel").change(function() {
+//        var firstRow = $("#achivTable :first-child :first-child").children()
+//        //alert($("#achivSel :selected").attr("val"))
+//        var selectedItemIndex = $("#achivSel :selected").attr("val");
+//        if(selectedItemIndex == 1) {
+//            $(firstRow[0]).text("Лидер")
+//            $(firstRow[1]).text("Топ 10")
+//            $(firstRow[2]).text("Топ 100")
+//            $(firstRow[3]).text("Топ 500")
+//        } else if(selectedItemIndex == 2) {
+//            $(firstRow[0]).text("Чемпион")
+//            $(firstRow[1]).text("Призёр")
+//            $(firstRow[2]).text("Топ 10")
+//            $(firstRow[3]).text("Топ 100")
+//        } else if (selectedItemIndex == 3) {
+//            $(firstRow[0]).text("Чемпион")
+//            $(firstRow[1]).text("Призёр")
+//            $(firstRow[2]).text("Топ 10")
+//            $(firstRow[3]).text("Топ 100")
+//        }
+//    });
+//});
 
 //$(document).ready(function(){
 //    $.get("dtop",
