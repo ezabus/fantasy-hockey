@@ -1,0 +1,51 @@
+group 'ru.fantasystat'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+ 
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+    compile 'javax.servlet:jstl:1.2'
+    compile 'org.springframework:spring-core:3.1.1.RELEASE'
+    compile 'org.springframework.data:spring-data-jpa:1.8.0.RELEASE'
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+    compile 'org.hibernate:hibernate-core:4.3.10.Final'
+    compile 'org.hibernate:hibernate-entitymanager:4.3.10.Final'
+    compile 'org.hsqldb:hsqldb:2.3.1'
+    compile 'mysql:mysql-connector-java:5.1.6'
+    compile 'commons-dbcp:commons-dbcp:1.2.2'
+    compile 'org.json:json:20141113'
+    compile 'org.springframework:spring-context:3.1.0.RELEASE'
+    compile 'org.springframework:spring-context-support:4.2.1.RELEASE'
+    compile 'net.sf.ehcache:ehcache:2.10.0'
+    compile 'org.jsoup:jsoup:1.7.2'
+    compile 'joda-time:joda-time:2.8.2'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    compile 'org.hibernate:hibernate-jpamodelgen:5.0.1.Final'
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.2.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.1.4'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+jettyRun{
+    contextPath = "spring4"
+    httpPort = 8080
+}
+
+jettyRunWar{
+    contextPath = "spring4"
+    httpPort = 8080
+}
