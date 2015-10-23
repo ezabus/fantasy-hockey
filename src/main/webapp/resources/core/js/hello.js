@@ -1,6 +1,9 @@
 $("#teamSumbit").click(function(){
     loadTeamInfo(urlToTeamID($("#srch-term").val()));
     loadSquad();
+    loadHistory();
+    loadWeekHistory();
+    drawChart();
 });
 
 function loadTeamInfo(id) {
@@ -46,6 +49,7 @@ $(document).on('click', '#day-table tr, #week-table tr', function() {
     loadTeamInfo(this.id);
     loadSquad();
     loadHistory();
+    loadWeekHistory();
     drawChart();
 });
 

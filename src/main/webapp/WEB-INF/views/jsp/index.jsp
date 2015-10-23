@@ -31,8 +31,8 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<ul class="nav navbar-nav">
-				<li><a href="/khl" style="color:white">КХЛ</a></li>
-				<li><a href="/nhl">НХЛ</a></li>
+				<li><a href="/khl">КХЛ</a></li>
+				<li><a href="/nhl" style="color:white">НХЛ</a></li>
 				<li><a href="http://www.sports.ru/tribuna/blogs/fantasypro/" title="Следите за новостями проекта" >Блог</a></li>
 				<li><a href="http://www.sports.ru/profile/126606132/" title="Добавляйтесь в друзья, задавайте вопросы">Автор</a></li>
 			</ul>
@@ -217,22 +217,22 @@
 <spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
 <spring:url value="/resources/core/js/jquery-2.1.4.min.js" var="jquery" />
 <spring:url value="/resources/core/js/jquery.datetimepicker.js" var="datetimepicker" />
-<spring:url value="/resources/core/js/bootstrap-switch.min.js" var="switch" />
 <spring:url value="/resources/core/js/top.js" var="top" />
 <spring:url value="/resources/core/js/squad.js" var="squad" />
 <spring:url value="/resources/core/js/history.js" var="history" />
 <spring:url value="/resources/core/js/chart.js" var="chart" />
+<spring:url value="/resources/core/js/dateload.js" var="dateload" />
 
 <script src="${jquery}"></script>
 <script src="${coreJs}"></script>
 <script src="${achivsJs}"></script>
 <script src="${bootstrapJs}"></script>
 <script src="${datetimepicker}"></script>
-<script src="${switch}"></script>
 <script src="${top}"></script>
 <script src="${squad}"></script>
 <script src="${history}"></script>
 <script src="${chart}"></script>
+<script src="${dateload}"></script>
 <script src="http://code.highcharts.com/stock/highstock.js"></script>
 <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
 <script type="text/javascript">

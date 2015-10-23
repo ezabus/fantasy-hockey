@@ -4,20 +4,20 @@ $(document).ready(function(){
         //alert($("#achivSel :selected").attr("val"))
         var selectedItemIndex = $("#achivSel :selected").attr("val");
         if(selectedItemIndex == 1) {
-            $(firstRow[0]).text("Лидер")
-            $(firstRow[1]).text("Топ 10")
-            $(firstRow[2]).text("Топ 100")
-            $(firstRow[3]).text("Топ 500")
+            $(firstRow[0]).text("Р›РёРґРµСЂ")
+            $(firstRow[1]).text("РўРѕРї 10")
+            $(firstRow[2]).text("РўРѕРї 100")
+            $(firstRow[3]).text("РўРѕРї 500")
         } else if(selectedItemIndex == 2) {
-            $(firstRow[0]).text("Чемпион")
-            $(firstRow[1]).text("Призёр")
-            $(firstRow[2]).text("Топ 10")
-            $(firstRow[3]).text("Топ 100")
+            $(firstRow[0]).text("Р§РµРјРїРёРѕРЅ")
+            $(firstRow[1]).text("РџСЂРёР·С‘СЂ")
+            $(firstRow[2]).text("РўРѕРї 10")
+            $(firstRow[3]).text("РўРѕРї 100")
         } else if (selectedItemIndex == 3) {
-            $(firstRow[0]).text("Чемпион")
-            $(firstRow[1]).text("Призёр")
-            $(firstRow[2]).text("Топ 10")
-            $(firstRow[3]).text("Топ 100")
+            $(firstRow[0]).text("Р§РµРјРїРёРѕРЅ")
+            $(firstRow[1]).text("РџСЂРёР·С‘СЂ")
+            $(firstRow[2]).text("РўРѕРї 10")
+            $(firstRow[3]).text("РўРѕРї 100")
         }
     });
 });

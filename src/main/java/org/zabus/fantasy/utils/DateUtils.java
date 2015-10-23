@@ -67,8 +67,9 @@ public class DateUtils {
 
     public static int getYear()
     {
-        LocalDateTime now = LocalDateTime.now();
-        return now.getYear();
+        //LocalDateTime now = LocalDateTime.now();
+        DateTime dt = new DateTime();
+        return dt.getYear();
     }
 
     public static void getMonthDateRange(int month)

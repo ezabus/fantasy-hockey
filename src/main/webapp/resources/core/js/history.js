@@ -92,15 +92,6 @@ $(document).ready(function() {
     $("#hist select").val("10");
 });
 
-$(document).ready(function() {
-    $("[name='dayWeekSwitch']").bootstrapSwitch();
-});
-
-$(document).ready(function() {
-    $("a [href='#hist']").bootstrapSwitch();
-    $("[name='dayWeekSwitch']").css("visibility: hidden");
-});
-
 function transformDateCode(dateCode) {
     var d = new Date(dateCode)
     return d.getDate();
